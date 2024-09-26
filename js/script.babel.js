@@ -23,7 +23,8 @@ var cardsArray = [{
   'img': 'img/goomba.png'
 }];
 
-var sound = document.getElementById("hahaha");
+
+let beat = new Audio('evil-laugh-49831.mp3');
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
   return 0.5 - Math.random();
@@ -103,7 +104,7 @@ grid.addEventListener('click', function (event) {
     if (firstGuess && secondGuess) {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
-        sound.play();
+        beat.play();
       }
       setTimeout(resetGuesses, delay);
     }
