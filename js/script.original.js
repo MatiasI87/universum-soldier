@@ -22,8 +22,8 @@ var cardsArray = [{
 }];
 
   function playSound1 () {
-	let dinga = new Audio('evil-laugh-49831.mp3');
-	dingaplay();
+	let haha = document.getElementById("haha");
+	haha.play();
 	
 }
 
