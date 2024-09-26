@@ -23,7 +23,7 @@ var cardsArray = [{
   'img': 'img/goomba.png'
 }];
 
-var sound = new sound('evil-laugh-49831.mp3');
+var sound = document.getElementById("hahaha");
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
   return 0.5 - Math.random();

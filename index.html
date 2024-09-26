@@ -10,18 +10,30 @@
 
   <link rel="stylesheet" href="css/style.prefix.css">
   <link rel="icon" type="image/png" href="img/mushroom.png">
+  
 
 </head>
 
 <body>
+<audio id="myAudio">
+  <source src="strange-creature-talks-96872.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="hahaha">
+  <source src="evil-laugh-49831.mp3" type="audio/mpeg">
+</audio>
+
+
+
 
   <div id="game"></div>
 
   <script src="js/script.babel.js"></script>
   <script>
   alert("world of war");
-  var audio = new Audio('strange-creature-talks-96872.mp3');
-  audio.play();
+	var x = document.getElementById("myAudio"); 
+
+  x.play();
   </script>
 </body>
 

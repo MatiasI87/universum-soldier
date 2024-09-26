@@ -21,7 +21,8 @@ var cardsArray = [{
   'img': 'img/goomba.png'
 }];
 
-var sound = new sound('evil-laugh-49831.mp3');
+var sound = document.getElementById("hahaha");
+
 
 
 const gameGrid = cardsArray
