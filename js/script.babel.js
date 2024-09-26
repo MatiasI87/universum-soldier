@@ -24,13 +24,14 @@ var cardsArray = [{
 }];
 
 
+var x = document.getElementById("haha");
 
-  function playSound () {
-	let dinga = new Audio('evil-laugh-49831.mp3');
-	ding.play();
-
-	
+function enableAutoplayer() { 
+  x.autoplay = true;
+  x.load();
 }
+
+
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
   return 0.5 - Math.random();
@@ -110,7 +111,7 @@ grid.addEventListener('click', function (event) {
     if (firstGuess && secondGuess) {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
-        playSound();
+        enableAutoplayer();
       }
       setTimeout(resetGuesses, delay);
     }
