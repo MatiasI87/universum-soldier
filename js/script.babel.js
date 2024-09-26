@@ -24,7 +24,13 @@ var cardsArray = [{
 }];
 
 
-let beat = new Audio('evil-laugh-49831.mp3');
+
+  function playSound () {
+	let dinga = new Audio('evil-laugh-49831.mp3');
+	ding.play();
+
+	
+}
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
   return 0.5 - Math.random();
@@ -104,7 +110,7 @@ grid.addEventListener('click', function (event) {
     if (firstGuess && secondGuess) {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
-        beat.play();
+        playSound();
       }
       setTimeout(resetGuesses, delay);
     }

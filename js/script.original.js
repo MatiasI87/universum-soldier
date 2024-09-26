@@ -21,7 +21,11 @@ var cardsArray = [{
   'img': 'img/goomba.png'
 }];
 
-var sound = document.getElementById("hahaha");
+  function playSound1 () {
+	let dinga = new Audio('evil-laugh-49831.mp3');
+	dingaplay();
+	
+}
 
 
 
@@ -107,7 +111,7 @@ grid.addEventListener('click', event => {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
         alert("hey two leg fuck you!");
-        sound.play();
+        playSound1();
         
       }
       setTimeout(resetGuesses, delay);
