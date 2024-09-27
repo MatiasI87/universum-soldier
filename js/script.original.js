@@ -21,10 +21,11 @@ var cardsArray = [{
   'img': 'img/goomba.png'
 }];
 
-  function playSound1 () {
-	let haha = document.getElementById("haha");
-	haha.play();
-	
+var x = document.getElementById("haha");
+
+function enableAutoplayer() { 
+  x.autoplay = true;
+  x.load();
 }
 
 
@@ -111,7 +112,7 @@ grid.addEventListener('click', event => {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
         alert("hey two leg fuck you!");
-        playSound1();
+        enableAutoplayer();
         
       }
       setTimeout(resetGuesses, delay);

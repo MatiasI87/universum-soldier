@@ -23,14 +23,27 @@ var cardsArray = [{
   'img': 'img/goomba.png'
 }];
 
+const button = document.querySelector("#button");
+const icon = document.querySelector("#button > i");
+const audio = document.querySelector("audio");
 
-var x = document.getElementById("haha");
+button.addEventListener("click", () => {
+function play() {
+  if (audio.paused) {
+    audio.volume = 0.2;
+    audio.play();
+    icon.classList.remove('fa-volume-up');
+    icon.classList.add('fa-volume-mute');
+    
+  } else {
+    audio.pause();
+    icon.classList.remove('fa-volume-mute');
+    icon.classList.add('fa-volume-up');
+  }
+  button.classList.add("fade");
+});
 
-function enableAutoplayer() { 
-  x.autoplay = true;
-  x.load();
 }
-
 
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
@@ -111,7 +124,7 @@ grid.addEventListener('click', function (event) {
     if (firstGuess && secondGuess) {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
-        enableAutoplayer();
+        play();
       }
       setTimeout(resetGuesses, delay);
     }
