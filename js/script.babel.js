@@ -27,8 +27,7 @@ const button = document.querySelector("#button");
 const icon = document.querySelector("#button > i");
 const audio = document.querySelector("audio");
 
-button.addEventListener("click", () => {
-function play() {
+button.addEventListener("click", function play() {
   if (audio.paused) {
     audio.volume = 0.2;
     audio.play();
@@ -43,7 +42,7 @@ function play() {
   button.classList.add("fade");
 });
 
-}
+
 
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
